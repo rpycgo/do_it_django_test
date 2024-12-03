@@ -3,7 +3,7 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/do_it_django_test
-file_exists_behavior: OVERWRITE
+    file_exists_behavior: OVERWRITE
 
 permissions:
   - object: /home/ubuntu/do_it_django_test
@@ -14,5 +14,5 @@ permissions:
 hooks:
   AfterInstall:
     - location: scripts/after_deploy.sh
-	    timeout: 100000  # 100초
+      timeout: 100000  # 100초
       runas: root
